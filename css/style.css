@@ -118,10 +118,10 @@ header p{
     }
     .container{
         margin: 12px 0px 12px 0px;
-        height: 80vh;
+        height: 50vh;
     }
     .container-background{
-        height: 80vh;
+        height: 50vh;
         animation: none;
     }
     .container-form{
