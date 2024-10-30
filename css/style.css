@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    font-family: calibri;
+}
+html{
+    height: 100%;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    flex-direction: row;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.container-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    animation: expandX 1s ease-in forwards;
+
+}
+.logo{
+    width: 8rem;
+}
+header{
+    text-align: left;
+    color: #fff;
+}
+header h1{
+    opacity: 0;
+    font-size: 2.5rem;
+    position: relative;
+    animation: slideRight 1s ease-in forwards;
+    animation-delay: 0.8s;
+}
+header p{
+    opacity: 0;
+    font-size: 1rem;
+    position: relative;
+    animation: slideLeft 1s ease-in forwards;
+    animation-delay: 0.8s;
+}
+.container-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 20rem;
+    overflow-y: auto;
+    background-color: #fff;
+}
+.container-form form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.container-form form label{
+    margin-bottom: 5px;
+}
+.container-form form input{
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+.container-form form button{
+    width: 50%;
+    font-size: 1rem;
+    border: none;
+    background-color: #0f0f0f;
+    color: #fff;
+    padding: 12px;
+    border-radius: 0.2rem;
+    align-self: center;
+    cursor: pointer;
+}
+.container-form form button:hover{
+    border: 1px solid #0f0f0f;
+    background-color: #fff;
+    color: #0f0f0f;
+    transition: .4s;
+}
+.text-signup{
+    text-align: center;
+}
+.text-signup a{
+    color: #2d2d2d;
+}
+.text-signup a:hover{
+    opacity: 0.5;
+    transition: .4s;
+}
+
+@media only screen and (max-width: 800px){
+    main{
+        flex-direction: column;
+        justify-content: center;
+    }
+    hr{
+        display: none;
+    }
+    header{
+        text-align: center;
+    }
+    .container{
+        padding: 60px 0px 60px 0px;
+    }
+    .container-background{
+        height: 80vh;
+        animation: none;
+    }
+    .container-form{
+        width: 80%;
+    }
+}
+
+@keyframes slideRight {
+    0%{opacity: 0; right: 100px;}
+    100%{opacity: 1; right: 0px;}
+}
+@keyframes slideLeft {
+    0%{opacity: 0; left: 100px;}
+    100%{opacity: 1; left: 0px;}
+}
+
+@keyframes expandX {
+    0%{width: 50%;}
+    100%{width: 100%;}
+}
